@@ -1,0 +1,199 @@
+.header {
+  background-color: var(--background);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  transition: color 0.3s ease;
+}
+
+.logoIcon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0; /* يمنع الانكماش */
+}
+
+.logoText {
+  display: none;
+}
+
+.nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--background);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999; /* فوق كل اشي */
+}
+.navOpen {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+.navList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.navItem {
+  margin: 0;
+}
+
+.navLink {
+  color: var(--text);
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: var(--primary);
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.navLink {
+  display: block;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-light);
+}
+.navLink:hover::after,
+.navLinkActive::after {
+  width: 100%;
+}
+
+.navLinkActive {
+  color: var(--primary);
+}
+
+.menuToggle {
+  display: block;
+  padding: 0.5rem;
+  color: var(--text);
+  cursor: pointer;
+}
+
+@media (max-width: 960px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+  .logo {
+    gap: 0.9rem;
+    margin: auto;
+  }
+  .logoText {
+    font-size: 1.89rem;
+    display: block;
+  }
+  .logoIcon {
+    width: 68px;
+    height: 68px;
+  }
+}
+
+/* من 1200px وطالع */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+}
+
+/* Desktop (شاشات أكبر من 769) */
+@media (min-width: 769px) {
+  .nav {
+    position: static;
+    display: block;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+  }
+
+  .navList {
+    flex-direction: row;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .navLink {
+    border-bottom: none;
+    padding: 0.5rem 0;
+  }
+
+  .logoText {
+    display: block;
+    font-size: 1.5rem;
+  }
+
+  .logoIcon {
+    width: 62px;
+    height: 62px;
+  }
+
+  .menuToggle {
+    display: none;
+  }
+}
+@media (max-width: 320px) {
+  .logoText {
+    font-size: 1.5rem;
+  }
+  .logoIcon {
+    width: 48px;
+    height: 48px;
+  }
+}
+@media (max-width: 220px) {
+  .logoText {
+    font-size: 1.3rem;
+  }
+  .logoIcon {
+    width: 40px;
+    height: 40px;
+  }
+}

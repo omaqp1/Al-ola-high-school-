@@ -1,0 +1,451 @@
+.teachers {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.sectionSubtitle {
+  font-size: 1.25rem;
+  color: var(--text-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Overview Section */
+.overview {
+  padding: 5rem 0;
+}
+
+.overviewContent {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.overviewText {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.overviewDescription {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--text-light);
+}
+
+.overviewStats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+
+.stat {
+  padding: 1.5rem;
+  background-color: var(--background-alt);
+  border-radius: 12px;
+}
+
+.statNumber {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-top: 0.5rem;
+}
+
+/* Featured Teachers Section */
+.featuredTeachers {
+  background-color: var(--background-alt);
+  padding: 5rem 0;
+}
+
+.teachersGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.teacherCard {
+  padding: 0;
+  overflow: hidden;
+}
+
+.teacherImage {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.teacherImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+@media (max-width: 767px) {
+  .teacherImage {
+    height: 40%;
+  }
+}
+@media (max-width: 400px) {
+  .teacherImage {
+    height: 30%;
+  }
+}
+@media (max-width: 250px) {
+  .teacherImage {
+    height: 20%;
+  }
+}
+.teacherCard:hover .teacherImage img {
+  transform: scale(1.05);
+}
+
+.contactOverlay {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.teacherCard:hover .contactOverlay {
+  opacity: 1;
+}
+
+.contactButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.contactButton:hover {
+  transform: scale(1.1);
+}
+
+.teacherContent {
+  padding: 2rem;
+}
+
+.teacherName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.teacherSubject {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.teacherDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.teacherDetail {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+.detailIcon {
+  width: 16px;
+  height: 16px;
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+
+.specialties {
+  margin-bottom: 1.5rem;
+}
+
+.specialtiesTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.specialtyTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.specialtyTag {
+  background-color: var(--background-alt);
+  color: var(--text-light);
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.achievements {
+  border-top: 1px solid var(--border-light);
+  padding-top: 1.5rem;
+}
+
+.achievementsTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.achievementIcon {
+  width: 16px;
+  height: 16px;
+  color: var(--accent);
+}
+
+.achievementList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.achievement {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-light);
+  line-height: 1.4;
+}
+
+.starIcon {
+  width: 14px;
+  height: 14px;
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+/* Departments Section */
+.departments {
+  padding: 5rem 0;
+}
+
+.departmentsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.departmentCard {
+  padding: 2rem;
+  border-left: 4px solid var(--primary);
+}
+
+.departmentContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.departmentName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.departmentDescription {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.departmentStats {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.departmentStat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+.statIcon {
+  width: 16px;
+  height: 16px;
+  color: var(--primary);
+}
+
+.departmentSubjects {
+  margin-top: 1rem;
+}
+
+.subjectsTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.subjectsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.subjectTag {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Values Section */
+.values {
+  background-color: var(--background-alt);
+  padding: 5rem 0;
+}
+
+.valuesContent {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.valuesList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.valueIcon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.valueContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.valueTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.valueDescription {
+  color: var(--text-light);
+  line-height: 1.6;
+  max-width: 400px;
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  .overviewContent {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .teachersGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .departmentsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .valuesList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .value {
+    text-align: left;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .valueIcon {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .sectionTitle {
+    font-size: 3rem;
+  }
+
+  .teachersGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+  .teachersGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}

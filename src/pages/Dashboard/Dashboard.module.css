@@ -1,0 +1,702 @@
+.dashboard {
+  min-height: 100vh;
+  background-color: var(--background-alt);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.dashboardContent {
+  padding: 2rem 0;
+  margin-top: -2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.dashboardLayout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* Sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.profileCard {
+  padding: 2rem;
+}
+
+.profileContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.profileAvatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary);
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.profileName {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.profileId {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.profileGrade,
+.profileClass {
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+.navigation {
+  padding: 1rem;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+
+.navItem:hover {
+  background-color: var(--background-alt);
+  color: var(--text);
+}
+
+.navItemActive {
+  background-color: var(--primary);
+  color: white;
+}
+
+.navItemActive:hover {
+  background-color: var(--primary-dark);
+  color: white;
+}
+
+/* Main Content */
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+
+/* Overview Section */
+.overview {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.overviewGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.statsCard {
+  padding: 2rem;
+}
+
+.statsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.statsTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statNumber {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  color: var(--text-light);
+  margin-top: 0.5rem;
+}
+
+.quickActions {
+  padding: 2rem;
+}
+
+.actionButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.recentActivity {
+  width: 100%;
+}
+
+.recentActivity > div {
+  padding: 2rem;
+}
+
+.activityList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.activityItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--background-alt);
+  border-radius: 8px;
+}
+
+.activityIcon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+}
+
+.activityContent {
+  flex: 1;
+}
+
+.activityTitle {
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.activityDate {
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+/* Grades Section */
+.grades {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.gradesHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gradesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.gradeCard {
+  padding: 1.5rem;
+}
+
+.gradeContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.gradeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gradeSubject {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.gradeTrend {
+  display: flex;
+  align-items: center;
+}
+
+.trendIcon {
+  transition: transform 0.3s ease;
+}
+
+.trendIcon.up {
+  color: var(--success);
+}
+
+.trendIcon.down {
+  color: var(--error);
+  transform: rotate(180deg);
+}
+
+.trendStable {
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.gradeScore {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.score {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.score.excellent {
+  color: var(--success);
+}
+
+.score.good {
+  color: var(--primary);
+}
+
+.score.fair {
+  color: var(--warning);
+}
+
+.score.needsImprovement {
+  color: var(--error);
+}
+
+.units {
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+/* Schedule Section */
+.schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.eventsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.eventCard {
+  padding: 1.5rem;
+}
+
+.eventContent {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.eventDate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary);
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  min-width: 60px;
+  text-align: center;
+}
+
+.eventMonth {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.eventDay {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.eventDetails {
+  flex: 1;
+}
+
+.eventTitle {
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.eventMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.eventTime {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+.eventLocation {
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+.eventType {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.eventType.exam {
+  background-color: var(--error);
+  color: white;
+}
+
+.eventType.presentation {
+  background-color: var(--warning);
+  color: white;
+}
+
+.eventType.meeting {
+  background-color: var(--primary);
+  color: white;
+}
+
+.eventType.activity {
+  background-color: var(--success);
+  color: white;
+}
+
+/* Assignments Section */
+.assignments {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.assignmentsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.assignmentCard {
+  padding: 1.5rem;
+}
+
+.assignmentContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.assignmentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.downloadButton {
+  color: aliceblue;
+  background-color: var(--primary);
+  align-items: center;
+  gap: 0.5rem;
+}
+.downloadButton:hover {
+  background-color: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+.assignmentTitle {
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.assignmentStatus {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.assignmentStatus.completed {
+  background-color: var(--success);
+  color: white;
+}
+
+.assignmentStatus.inProgress {
+  background-color: var(--warning);
+  color: white;
+}
+
+.assignmentStatus.pending {
+  background-color: var(--error);
+  color: white;
+}
+
+.assignmentStatus.notStarted {
+  background-color: var(--text-muted);
+  color: white;
+}
+
+.assignmentMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.assignmentSubject {
+  font-size: 0.875rem;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.assignmentDue {
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+.assignmentPriority {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  align-self: flex-start;
+}
+
+.assignmentPriority.high {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--error);
+}
+
+.assignmentPriority.medium {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--warning);
+}
+
+.assignmentPriority.low {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--success);
+}
+
+/* Achievements Section */
+.achievements {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.achievementsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.achievementCard {
+  padding: 1.5rem;
+}
+
+.achievementContent {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.achievementIcon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.achievementDetails {
+  flex: 1;
+}
+
+.achievementTitle {
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.achievementDate {
+  font-size: 0.875rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.achievementType {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.achievementType.academic {
+  background-color: var(--primary);
+  color: white;
+}
+
+.achievementType.competition {
+  background-color: var(--accent);
+  color: white;
+}
+
+.achievementType.attendance {
+  background-color: var(--success);
+  color: white;
+}
+
+.achievementType.leadership {
+  background-color: var(--secondary);
+  color: white;
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  .dashboardLayout {
+    grid-template-columns: 280px 1fr;
+  }
+
+  .overviewGrid {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .gradesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .actionButtons {
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+
+  .actionButtons > * {
+    flex: 1;
+  }
+
+  .eventContent {
+    align-items: flex-start;
+  }
+
+  .assignmentHeader {
+    align-items: center;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .gradesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .overviewGrid {
+    grid-template-columns: 1fr 300px;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+  .gradesGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
