@@ -8,7 +8,7 @@ import def from '../../../public/def.jpg'
 const Teachers: React.FC = () => {
   const teachers = [
   {
-    name: 'د. سارة كوهين',
+    name: 'د. احمد محسن ',
     subject: 'الرياضيات',
     education: 'دكتوراه في الرياضيات، جامعة تل أبيب',
     experience: '15 سنة',
