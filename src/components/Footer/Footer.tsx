@@ -57,11 +57,11 @@ const Footer: React.FC = () => {
             <div className={styles.contactList}>
               <div className={styles.contactItem}>
                 <MapPin className={styles.contactIcon} />
-                <span>بيت حنينا, بعرفش اسم الشارع</span>
+                <span>بيت حنينا، الجوزة 25</span>
               </div>
               <div className={styles.contactItem}>
                 <Phone className={styles.contactIcon} />
-                <span>+972-0-123-4567</span>
+                <span>02-502-3618</span>
               </div>
               <div className={styles.contactItem}>
                 <Mail className={styles.contactIcon} />
